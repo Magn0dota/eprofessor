@@ -4,34 +4,25 @@ import { useState } from 'react'
 import background from './images/background.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Button from './components/Button'
-import Listas from './components/Listas'
+import ListaGratis from './components/ListaGratis'
+import ListaPago from './components/ListaPago'
 
 function App() {
-  const [showListas, setShowListas] = useState(false)
-  const [menus] = useState([
-    {
-        id: 1,
-        item: "Software gratuito",
-        selected: false,
-    },
-    {
-        id: 2,
-        item: "Software pago",
-        selected: false,
-    },
-  ])
+  const [showListaGratis, setShowListaGratis] = useState(false)
+  const [showListaPago, setShowListaPago] = useState(false)
 
   return (
     <>
-      <div style={{ backgroundImage: `url(${background})`, width: '100vw', height: '100vh' }} >
+      <div style={{ backgroundImage: `url(${background})`, width: '100%', height: '100%' }} >
 
-        <div className="container">
+        <div className="container-bootstrap-override">
           <Header />
-          <Menus menus={menus} />
-          <Button color='green' text='funciona pfv codigo' />
+          <Button color='teal' text='Exibir ferramentas gratuitas' onClick={() => setShowListaGratis(true) & setShowListaPago(false)}/>
+          <Button color='teal' text='Exibir ferramentas pagas' onClick={() => setShowListaPago(true) & setShowListaGratis(false)}/>
         </div>
         <div className="container2">
-          {showListas && <Listas/>}
+          {showListaGratis && <ListaGratis onShow={ListaGratis}/>}
+          {showListaPago && <ListaPago onShow={ListaPago}/>}
         </div>
       </div>
     </>

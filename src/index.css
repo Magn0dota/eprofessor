@@ -10,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.container-bootstrap-override {
   max-width: 1000px;
   margin: 30px auto;
   overflow: auto;
@@ -32,6 +32,10 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+.foto{
+  max-width: 500px;
+  max-height: 400px;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -39,10 +43,10 @@ body {
   margin-bottom: 20px;
 }
 
-.btn {
+.btn-bootstrap-override {
   display: inline-block;
-  background: #000;
-  color: #fff;
+  color: rgb(255, 255, 255);
+  background: black;
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -53,15 +57,15 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.btn:focus {
+.btn-bootstrap-override:focus {
   outline: none;
 }
 
-.btn:active {
+.btn-bootstrap-override:active {
   transform: scale(0.98);
 }
 
-.btn-block {
+.btn-bootstrap-override-block {
   display: block;
   width: 100%;
 }
