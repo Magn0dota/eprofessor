@@ -5,10 +5,10 @@ import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from 'prop-types'
 import Button from './Button'
-import zoom from '../images/zoom.jpg'
 
 const ListaPago = ({ onShow }) => {    
     var zoom = require('../images/zoom.jpg')
+    var msoffice = require('../images/msoffice.jpg')
     return (
         <div>
             <Tab.Container id="ListaPago" defaultActiveKey="first">
@@ -33,7 +33,8 @@ const ListaPago = ({ onShow }) => {
                                     window.location.href='https://zoom.us/download';}}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                                O Microsoft Office, ou simplesmente Office, é um pacote de aplicativos para escritório e serviços, desenvolvido pela Microsoft. Contém programas como processador de texto, planilha de cálculo, banco de dados, apresentação gráfica, cliente de e-mails, entre outros. Desde o Office 2013, a Microsoft promove o Office 365 como o principal meio de obtenção do Microsoft Office: ele permite o uso do software e outros serviços em um modelo de negócios por assinatura, e os usuários recebem atualizações de recursos do software durante a vida útil da assinatura.{"\n"}
+                                <img className="foto" src={msoffice.default} /><br/>
+                                O Microsoft Office, ou simplesmente Office, é um pacote de aplicativos para escritório e serviços, desenvolvido pela Microsoft. Contém programas como processador de texto, planilha de cálculo, banco de dados, apresentação gráfica, cliente de e-mails, entre outros. Desde o Office 2013, a Microsoft promove o Office 365 como o principal meio de obtenção do Microsoft Office: ele permite o uso do software e outros serviços em um modelo de negócios por assinatura, e os usuários recebem atualizações de recursos do software durante a vida útil da assinatura.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
                                     window.location.href='https://www.office.com/?auth=1';}}/>

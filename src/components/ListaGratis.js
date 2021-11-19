@@ -5,10 +5,14 @@ import Col from 'react-bootstrap/Col'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PropTypes from 'prop-types'
 import Button from './Button'
-import discord from '../images/discord.jpg'
 
 
 const ListaGratis = ({ onShow }) => {
+    var discord = require('../images/discord.jpg')
+    var googlemeet = require('../images/googlemeet.jpg')
+    var googledrive = require('../images/googledrive.jpg')
+    var libreoffice = require('../images/libreoffice.jpg')
+    var dropbox = require('../images/dropbox.jpg')
     return (
         <div>
             <Tab.Container id="ListaGratis" defaultActiveKey="first">
@@ -35,30 +39,35 @@ const ListaGratis = ({ onShow }) => {
                     <Col sm={9}>
                         <Tab.Content>
                             <Tab.Pane eventKey="first">
+                                <img className="foto" src={discord.default} /><br/>
                                 O Discord pode ser utilizado no Windows, MacOS, Android, iOS, Linux, Xbox One, Xbox Series ou em um navegador web, que suportam recursos fundamentais de texto baseados em bate-papo. O aplicativo Discord para computadores pessoais foi projetado para uso durante jogos, incluindo recursos como baixa latência, servidores de bate-papo de voz gratuitos para usuários e uma infraestrutura de servidor dedicada. Na versão atual já há suporte a chamadas de vídeo e compartilhamento de tela.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
                                     window.location.href='https://discord.com';}}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
+                                <img className="foto" src={googlemeet.default} /><br/>
                                 Google Meet é um serviço de comunicação por vídeo desenvolvido pelo Google. Mantenha sua equipe conectada por videoconferência empresarial, um recurso criado com a segurança e eficiência da infraestrutura global do Google. O Meet está incluído no Google Workspace e no Google Workspace for Education. Para usuários gratuitos, as sessões são limitadas a 60 minutos.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
                                     window.location.href='https://apps.google.com/meet/';}}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
+                                <img className="foto" src={googledrive.default} /><br/>
                                 Google Drive é um serviço de armazenamento e sincronização de arquivos desenvolvido pela Google. Google Drive abriga agora o Google Docs, um leque de aplicações de produtividade, que oferece a edição de documentos, folhas de cálculo, apresentações, e muito mais. O serviço é grátis mas caso queira mais armazenamento é necessário comprar.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
                                     window.location.href='https://www.google.com/intl/pt/drive/';}}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="fourth">
+                                <img className="foto" src={libreoffice.default} /><br/>
                                 LibreOffice é uma suíte de aplicativos livres e de código aberto para escritório disponível para Windows, Unix, Solaris, Linux e Mac OS X.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
                                     window.location.href='https://pt-br.libreoffice.org';}}/>
                             </Tab.Pane>
                             <Tab.Pane eventKey="fifth">
+                                <img className="foto" src={dropbox.default} /><br/>
                                 Dropbox é um serviço para armazenamento e partilha de arquivos. É baseado no conceito de "computação em nuvem". Ele pertence ao Dropbox Inc., sediada em San Francisco, Califórnia, EUA. A empresa desenvolvedora do programa disponibiliza centrais de computadores que armazenam os arquivos de seus clientes. O serviço é grátis mas caso queira mais armazenamento é necessário comprar.<br/>
                                 <Button color='green' text='Clique aqui para ir para a página da ferramenta' onClick={(e) => {
                                     e.preventDefault();
